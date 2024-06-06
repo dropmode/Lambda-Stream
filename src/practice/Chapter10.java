@@ -17,19 +17,12 @@ public class Chapter10 {
 		// 1. 未完了のタスクの個数を表示
 		// 2. 未完了のタスク一覧を日時の昇順に並べて表示
 
-		long n =list.stream()
-		.filter(l -> l.isDone() == false)
-		.count();
+		long n = list.stream().filter(l -> l.isDone() == false).count();
 		System.out.println("未完了のタスクの個数は" + n);
-		
+
 		System.out.println("【未完了のタスクを昇順に並び替えて一覧表示】");
-		
-		list.stream()
-		.filter(l -> l.isDone() == false)
-		.sorted()
-		.forEach(System.out::println);
-		
-		
+
+		list.stream().filter(l -> l.isDone() == false).sorted().forEach(System.out::println);
 
 	}
 }
