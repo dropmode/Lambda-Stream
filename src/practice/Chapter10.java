@@ -3,7 +3,6 @@ package practice;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 public class Chapter10 {
 	public static void main(String[] args) throws Exception {
@@ -21,9 +20,7 @@ public class Chapter10 {
 		long n =list.stream()
 		.filter(l -> l.isDone() == false)
 		.count();
-		
-		Consumer<String> t1 = System.out::println;
-		t1.accept("未完了のタスクの個数は" + n);
+		System.out.println("未完了のタスクの個数は" + n);
 		
 		System.out.println("【未完了のタスクを昇順に並び替えて一覧表示】");
 		
